@@ -21,7 +21,7 @@
             <td>{{ $contacto->nombre }}</td>
           </tr>
         <tr>
-            <th scope="row">Alumno</th>
+            <th scope="row">Apellido</th>
             <td>{{ $contacto->apellido }}</td>
         </tr>
         <tr>

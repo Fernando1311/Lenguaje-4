@@ -44,7 +44,6 @@ Route::put('/contactos/{id}/editar', [ContactoController::class, 'update'])
 Route::delete('/contactos/{id}/borrar', [ContactoController::class, 'destroy'])
 ->name('contacto.borrar')->where('id', '[0-9]+');
 
-Route::get('/buscar', [ContactoController::class, 'buscar'])->name('buscar');
 
 
 

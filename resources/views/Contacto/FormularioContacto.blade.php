@@ -17,7 +17,8 @@
     </div>
 @endif
 
-<form   method="POST" action="{{ isset($contacto) ? route("contacto.update", ["contacto"=> $contacto->id]): route("contacto.guardar") }}">
+<form   method="POST" action="{{ route('contacto.guardar')}}">
+     @csrf
 
     <div class="form-group">
         <label for="nombre">Nombre</label>

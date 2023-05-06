@@ -17,7 +17,8 @@
     </div>
 @endif
 
-<form   method="POST" action="{{ route("evento.guardar") }}">
+<form     method="POST" action="{{ route('evento.guardar')}}">
+     @csrf
         
     <div class="form-group">
         <label for="titulo">Titulo</label>

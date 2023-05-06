@@ -42,7 +42,6 @@ class ContactoController extends Controller
         $request->validate([   //validar
             'nombre'=>'required|alpha',
             'apellido'=>'required|alpha',
-            'correo_electronico'=>'required',
             'telefono'=>'required'
         ]);
         
@@ -56,7 +55,7 @@ class ContactoController extends Controller
         $nuevoContacto->telefono = $request->input("telefono");
 
         if($nuevoContacto->save()){
-            return redirect()->route('contacto.index')->with('mensaje', 'El estudiante fue creado exitosamente.');
+            return redirect()->route('contacto.index')->with('mensaje', 'El Contacto fue creado exitosamente.');
         }else{
             return back();
         }
@@ -67,7 +66,6 @@ class ContactoController extends Controller
         $request->validate([   //validar
             'nombre'=>'required|alpha',
             'apellido'=>'required|alpha',
-            'correo_electronico'=>'required',
             'telefono'=>'required'
         ]);
         
@@ -81,7 +79,7 @@ class ContactoController extends Controller
         $Contacto->telefono = $request->input("telefono");
 
         if($Contacto->save()){
-            return redirect()->route('contacto.index')->with('mensaje', 'El Estudiante fue modificado Exitosamente.');
+            return redirect()->route('contacto.index')->with('mensaje', 'El Contacto fue modificado Exitosamente.');
         }else{
             return back();
         }
@@ -98,7 +96,7 @@ class ContactoController extends Controller
 
         //Se redigira
 
-        return redirect('/contactos/')->with('mensaje', 'Estudiante borrado completamente');
+        return redirect('/contactos/')->with('mensaje', 'Contacto borrado completamente');
     }
 
 }

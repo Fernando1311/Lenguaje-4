@@ -29,7 +29,7 @@
       <br>
       <div class="form-group">
         <label for="correo">Correo Electronico</label>
-        <input type="text" class="form-control" name="correo"  id="correo" placeholder="example@email.com" value="{{ $contacto->correo_electronico }}">
+        <input type="email" class="form-control" name="correo"  id="correo" placeholder="example@email.com" value="{{ $contacto->correo_electronico }}">
       </div>
       <br>
       <div class="form-group">

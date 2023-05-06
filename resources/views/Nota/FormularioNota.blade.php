@@ -17,8 +17,8 @@
     </div>
 @endif
 
-<form   method="POST" action="{{ isset($nota) ? route("nota.update", ["nota"=> $nota->id]): route("nota.agregar") }}">
-        
+<form   method="POST"   method="POST" action="{{ route('nota.guardar')}}">
+     @csrf
     <div class="form-group">
         <label for="texto">Texto</label>
         <input type="text" class="form-control" name="texto"  id="texto" placeholder="Escriba un Texto">
